@@ -1,0 +1,10 @@
+.DS_Store
+__pycache__/
+*.pyc
+.venv/
+# Keep individual student work outside the public skill repository.
+student-work/
+submissions/
+previews/
+.env
+.env.*
