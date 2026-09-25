@@ -1,4 +1,4 @@
 interface:
   display_name: "Lab Grader Preview"
   short_description: "Estimate a lab grade and get useful revision feedback"
-  default_prompt: "Use $lab-grader-preview to estimate the grade for my named lab writeup using the assignment, rubric, and instructor guidance in the accessible lab directory."
+  default_prompt: "Use $lab-grader-preview to estimate the grade for my named lab writeup using the assignment, rubric, and any available instructor guidance in the accessible lab directory."

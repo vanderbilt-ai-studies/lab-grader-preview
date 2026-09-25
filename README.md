@@ -6,13 +6,14 @@ The preview includes rubric scores, a reason for each deduction, specific revisi
 
 ## What you need
 
-Give the assistant the **filename or path of your lab writeup**. It also needs access to three documents for that lab:
+Give the assistant the **filename or path of your lab writeup**, plus:
 
 1. Assignment instructions.
 2. Grading rubric, with point totals and scoring levels.
-3. Instructor guidance, including applicable clarifications or links to a separate calibration document.
 
-Your instructor provides these documents. The skill will ask for a missing required document rather than invent grading rules. Course notes are optional but enable specific study references. Screenshots and other evidence that belong to your writeup should also be accessible.
+Include instructor guidance or clarifications if you have them. The skill asks whether guidance is available, but **guidance is not required**: it can estimate a grade from the assignment and rubric alone. It notes when guidance was unavailable and can revise the estimate if you supply it later. Missing guidance does not cost you points.
+
+Your instructor provides the assignment and rubric. The skill will ask for either missing required document rather than invent grading rules. Course notes are optional but enable specific study references. Screenshots and other evidence that belong to your writeup should also be accessible.
 
 A simple folder arrangement is:
 
@@ -22,12 +23,12 @@ my-lab/
 └── grading-documents/
     ├── assignment.md
     ├── rubric.md
-    ├── instructor-guidance.md
+    ├── instructor-guidance.md  # optional
     ├── calibration.md          # if supplied/referenced by the instructor
     └── notes/                 # optional course notes
 ```
 
-These filenames and formats are examples. The documents may be PDFs, Markdown, or other formats your assistant can read. They may be in another directory if you give its location. A single document containing clearly identified assignment, rubric, and guidance sections is also fine.
+These filenames and formats are examples. The documents may be PDFs, Markdown, or other formats your assistant can read. They may be in another directory if you give its location. A single document containing clearly identified assignment and rubric sections, with guidance if available, is also fine.
 
 ## Use it
 
@@ -43,7 +44,7 @@ Install the folder containing `SKILL.md` using your assistant's skill installer.
 
 If the documents are elsewhere:
 
-> Use $lab-grader-preview to preview `/path/to/my-lab/writeup.pdf`. The assignment, rubric, and instructor guidance are in `/path/to/course/lab-02/grading-documents/`.
+> Use the lab-grader-preview skill to preview `/path/to/my-lab/writeup.pdf`. The assignment and rubric are in `/path/to/course/lab-02/grading-documents/`. I do not have additional instructor guidance.
 
 The preview appears in the conversation. The skill does not modify your writeup, create grading files, download submissions, anonymize files, export packets, or post to Brightspace. If it cannot inspect a screenshot or linked evidence, it identifies the uncertainty instead of treating that evidence as missing work.
 
